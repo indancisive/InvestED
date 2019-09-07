@@ -1,4 +1,4 @@
-# investmate
+# Investmate
 ## Inspiration:
 
 Invseting can be a daunting task for those who are unfamiliar with technical financial terminology and analysis. Investmate was built to act as a support for those who are new to investing.
@@ -13,4 +13,4 @@ We took data from Goldman Sachs USCANFPP, sourced from the Marquee API to simpli
 
 ## What we built it with:
 
-python, SQL, Goldman Sachs Marquee API
+python, sqlite, Goldman Sachs Marquee API, django, javascript, html5, uikit 
