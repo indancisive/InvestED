@@ -5,6 +5,13 @@ import requests
 import json
 #Import secret API keys
 from secret import marquee_client_id, marquee_client_secret
+import sqlite3
+con = sqlite3.connect('db.sqlite3')
+
+def sql_insert(con, entities):
+    cursorObj = con.cursor()
+    cursorObj.execute('INSERT INTO investmate_backend_stock(name, ticker, sector, description, financialReturnScore, growthScore, multipleScore, integratedScore) VALUES(?, ?, ?, ?, ?, ?, ?, ?)', entities)
+    con.commit()
 
 # Authentication
 auth_data = {
@@ -65,14 +72,16 @@ for result in results['data']:
         except:
             integratedScore = 0
     
-        # Construct URL to access assets GET endpoint using string literal to insert GSID
+        # Construct URL to access /assets GET endpoint using string literal to insert GSID
         request_url = f"https://api.marquee.gs.com/v1/assets?gsid={temp_gsid}"
         request = session.get(url=request_url)
         results = json.loads(request.text)
         # Loops through dataset and extracts stock ticker from queried data
         for temp_dict in results['results'][0]['identifiers']:
             if 'TKR' in temp_dict.values():
-                print(temp_dict['value'])
+                ticker = temp_dict['value']
                 continue
-
-
+        entities = ("name", ticker, "sector", 'IT', financialReturnsScore, growthScore, multipleScore, integratedScore)
+        sql_insert(con, entities)
+        print('sql write success')
+        

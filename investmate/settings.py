@@ -53,7 +53,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'investmate.urls'
 
 TEMPLATES = [
-    {
+    {  
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
         'APP_DIRS': True,
