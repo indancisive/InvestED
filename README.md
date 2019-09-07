@@ -1,7 +1,7 @@
 # investmate
 ## Inspiration:
 
-Invseting can be a daunting task for those who are unfamiliar with technical financial terminology and analysis. Investmate was built to act as a support for those beginners who are new to investing.
+Invseting can be a daunting task for those who are unfamiliar with technical financial terminology and analysis. Investmate was built to act as a support for those who are new to investing.
 
 ## What it does:
 
