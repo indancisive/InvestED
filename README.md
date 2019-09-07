@@ -9,7 +9,7 @@ Investmate allows for users to follow a selection process that explains their ch
 
 ## How we built it:
 
-We took data from Goldman-Sachs USCANFPP, sourced from the Marquee API to simplify stock analysis. The user interface was developed using Bulma CSS framework.
+We took data from Goldman Sachs USCANFPP, sourced from the Marquee API to simplify stock analysis. The user interface was developed using Bulma CSS framework.
 
 ## What we built it with:
 
