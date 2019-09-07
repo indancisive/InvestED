@@ -81,7 +81,7 @@ for result in results['data']:
             if 'TKR' in temp_dict.values():
                 ticker = temp_dict['value']
                 continue
-        entities = ("name", ticker, "sector", 'IT', financialReturnsScore, growthScore, multipleScore, integratedScore)
+        entities = ("name", ticker, "sector", 'description', financialReturnsScore, growthScore, multipleScore, integratedScore)
         sql_insert(con, entities)
         print('sql write success')
         
