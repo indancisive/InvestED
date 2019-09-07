@@ -13,4 +13,4 @@ We took data from Goldman Sachs USCANFPP, sourced from the Marquee API to simpli
 
 ## What we built it with:
 
-python, sqlite, Goldman Sachs Marquee API, django, javascript, html5, uikit 
+Python, SQLite, Goldman Sachs Marquee API, Django, Javascript, HTML5, UIKit 
