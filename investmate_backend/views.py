@@ -6,5 +6,8 @@ def index(request):
     conn = sqlite3.connect("db.sqlite3")
     cursor = conn.execute("SELECT * FROM investmate_backend_stock")
     rows = cursor.fetchall()
-    args = {'test':rows}
+    args = {'test': rows}
     return render(request, 'index.html', args)
+
+def about(request):
+    return render(request, 'about.html', {})
