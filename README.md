@@ -22,4 +22,14 @@ While on one end standing as challenges, conquering these obstacles left us with
 
 ## What we built it with:
 
-Python, SQLite, Goldman Sachs Marquee API, Django, Javascript, HTML5, UIKit 
+Goldman Sachs Marquee API - Used to retrieve raw investing and financial information on stocks\n
+
+UIKit - Web CSS framework
+
+Javascript - 
+
+Python - Backend
+
+Django - Frontend
+
+SQLite - Database Storage
