@@ -7,7 +7,7 @@ We hope that InvestED will act not only as a stepping stone into the often intim
 
 ## What it does:
 
-InvestED guides users through a step-by-step process that explains their choices when analyzing a stock to invest in a simplified and easy-to-understand manner. InvestED streamlines the investing experience for those new to the field and makes it accessible.
+InvestED guides users through a step-by-step process that explains their choices when analyzing what to invest in in a simplified and easy-to-understand manner. InvestED streamlines the investing experience for those new to the field and makes it accessible through its beautiful UI.
 
 ## How we built it:
 
@@ -21,7 +21,7 @@ As a group of relatively new hackers, our inexperience often lended itself to sl
 
 ## Accomplishments we are proud of:
 
-While on one end standing as challenges, conquering these obstacles left us with an unparalleled sense of pride. Spending several hours fiddling with data only for it finally appear in our SQL3db browser might not be immensely impressive, we learned tremendously from it.
+While on one end standing as challenges, conquering these obstacles left us with an unparalleled sense of pride. Spending several hours fiddling with the Marquee API's data through our script only for it finally appear in our SQL3db browser line by line might not be immensely impressive, but we learned tremendously from it.
 
 
 ## What we built it with:
@@ -32,6 +32,6 @@ UIKit - Front-end Web CSS framework
 
 Django/Python - Back-end Web Framework
 
-JavaScript - Animations
-
 SQLite - Database
+
+JavaScript - Animations
