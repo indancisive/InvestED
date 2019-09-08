@@ -47,7 +47,7 @@
                     <div class="uk-navbar-right">
                         <ul class="uk-navbar-nav">
                             <li class="uk-active uk-visible@m"><a href="https://github.com/jeffreyzhang2001/investmate" data-uk-icon="icon: github; ratio: 1.3"></a></li>
-                            <li class="uk-active uk-visible@m"><a href="" data-uk-icon="home"></a></li>
+                            <li class="uk-active uk-visible@m"><a href="/" data-uk-icon="home"></a></li>
                             <li class="uk-visible@s"><a href="/about">About</a></li>
                         </ul>
                     </div>
@@ -56,19 +56,59 @@
         </div>
         <!-- /NAV -->
         <!-- TEXT -->
-        <div class="uk-card uk-child-width-expand@s uk-text-center" uk-grid>
+        <div class="uk-container uk-container-small uk-flex-auto uk-text-center" data-uk-scrollspy="target: > .animate; cls: uk-animation-slide-bottom-small uk-invisible; delay: 300">
+                <div class="uk-width-4-5@m uk-margin-auto animate uk-invisible uk-padding-small uk-padding-remove-bottom">
+                    <p class="uk-text-secondary">Select an investment strategy that suits you. <a uk-icon="icon: question" uk-tooltip="Click me for more information!" href="#modal-center" uk-toggle></a>
+
+                        <div id="modal-center" class="uk-flex-top" uk-modal>
+                            <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                        
+                                <button class="uk-modal-close-default" type="button" uk-close></button>
+                        
+                                <div uk-grid>
+                                    <div class="uk-width-small@m">
+                                
+                                        <ul class="uk-nav uk-nav-default" uk-switcher="connect: #component-nav; animation: uk-animation-fade">
+                                            <li ><a href="#">Active</a></li>
+                                            <li><a href="#">Item</a></li>
+                                            <li><a href="#">Item</a></li>
+                                        </ul>
+                                
+                                    </div>
+                                    <div class="uk-width-expand@m">
+                                
+                                        <ul id="component-nav" class="uk-switcher uk-text-danger">
+                                            <li>"This is absolute DOG"</li>
+                                            <li>"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</li>
+                                            <li>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod."</li>
+                                        </ul>
+                                
+                                    </div>
+                                </div>  
+                        
+                            </div>
+                        </div></p>
+                    
+                </div>
+        
+        <div class="uk-card uk-child-width-expand@s uk-text-center" uk-card>
             <div>
-                <a href={{long}}><div class="uk-card uk-card-default uk-card-body uk-padding uk-margin-left">Long Term Growth</div></a>
+                <a href={{long}}><div class="uk-card uk-card-default uk-card-body uk-margin-left" uk-tooltip="Sales growth measures the ability of sales to increase revenue over a period of time.">Long-Term Growth</div></a>
+                
             </div>
+
             <div>
-                <a href={{high_return}}><div class="uk-card uk-background-secondary uk-card-body uk-margin-left">High Potential Return</div></a>
+                <a href={{high_return}}><div class="uk-card uk-background-secondary uk-card-body uk-margin-left" uk-tooltip="">High Potential Return</div></a>
             </div>
+
             <div>
-                <a href={{currently_undervalued}}><div class="uk-card uk-card-default uk-card-body uk-margin-left">Currently Undervalued</div></a>
+                <a href={{currently_undervalued}}><div class="uk-card uk-card-default uk-card-body uk-margin-left" uk-tooltip="">Currently Undervalued</div></a>
             </div>
+
             <div>
-                <a href={{well_rounded}}><div class="uk-card uk-background-secondary uk-card-body uk-margin-left">Well-Roundedness</div></a>
+                <a href={{well_rounded}}><div class="uk-card uk-background-secondary uk-card-body uk-margin-left" uk-tooltip="The integrated score is a composite of the growth, returns, and multiple scores. It provides an overall outlook for the stock that has been chosen.">Well-Roundedness</div></a>
             </div>
+        </div>
     </div>
 
         <!-- /TEXT -->

@@ -14,25 +14,24 @@ def guide(request):
 def guide2(request, sector):
     # Create 4 dynamic urls:
     # 1. Long-Term Growth
-    ltgURL = f"/results/{sector}/longTermGrowth/"
+    ltgURL = f"/results/{sector}/growthScore/"
     # 2. High Potential Return
-    hprURL = f"/results/{sector}/highPotentialReturn"
+    hprURL = f"/results/{sector}/financialReturnScore"
     # 3. Currently Undervalued
-    cuURL = f"/results/{sector}/currentlyUndervalued"
+    cuURL = f"/results/{sector}/multipleScore"
     # 4. Well-Roundedness
-    wrURL = f"/results/{sector}/wellRoundedness"
+    wrURL = f"/results/{sector}/integratedScore"
     
-    urls = {'long': ltgURL, 'high_return':hprURL, 'currently_undervalued':cuURL,'well_rounded': wrURL}
+    urls = {'long': ltgURL, 'high_return': hprURL, 'currently_undervalued':cuURL,'well_rounded': wrURL}
     return render(request, 'guide2.html', urls)
 
-def results(request, sector, dog):
-    '''
+def results(request, sector_type, portfolio_type):
+    # Connect to and instantiate SQL database object
     conn = sqlite3.connect("db.sqlite3")
-    cursor = conn.execute("SELECT * FROM investmate_backend_stock")
+    # SQL code that instantiates on SQL object by filtering for specified sector's stocks
+    # and sorted descending for the specified investment style's corresponding score
+    cursor = conn.execute(f"SELECT * FROM investmate_backend_stock WHERE sector = '{sector_type}' ORDER BY {portfolio_type} DESC")
     rows = cursor.fetchall()
-    args = {'test': rows}
-    '''
-    sector += "dan"
-    args = {'test': sector + dog}
-    
+    args = {'top3_stocks': rows[:3]}
+
     return render(request, 'results.html', args)
