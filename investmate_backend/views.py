@@ -42,16 +42,16 @@ def results(request, sector_type, portfolio_type):
         cursor = conn.execute(f"SELECT * FROM investmate_backend_stock WHERE sector = '{sector_type}' ORDER BY {portfolio_type} DESC")
         rows = cursor.fetchall()
 
-        # Query IEX Cloud API for latest stock price
-        session = requests.Session()
-        top3_stocks_price_list = []
-        for x in range(3):
-            # Construct URL
-            temp_ticker = rows[x][2]
-            request_url = f"https://cloud.iexapis.com/stable/stock/{temp_ticker}/quote?token={iex_api_token}"
-            response = session.get(url=request_url)
-            results = json.loads(response.text)
-            top3_stocks_price_list.append(float(results["latestPrice"]))
+    # Query IEX Cloud API for latest stock price
+    session = requests.Session()
+    top3_stocks_price_list = []
+    for x in range(3):
+        # Construct URL
+        temp_ticker = rows[x][2]
+        request_url = f"https://cloud.iexapis.com/stable/stock/{temp_ticker}/quote?token={iex_api_token}"
+        response = session.get(url=request_url)
+        results = json.loads(response.text)
+        top3_stocks_price_list.append(float(results["latestPrice"]))
 
     args = {'top3_stocks': rows[:3], 'top3_stocks_price_list': top3_stocks_price_list}
     return render(request, 'results.html', args)
