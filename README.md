@@ -1,19 +1,23 @@
 # InvestED
 ## Inspiration:
 
-Investing can be a daunting task for those who are unfamiliar with technical financial terminology and analysis. InvestED was built to act as a support for those who are new to investing.
+Investing can be a daunting task for those who are unfamiliar with technical analysis and financial jargon. With a strong focus on accessibility and minimalism, InvestED was created first and foremost with the aspiration of improving the financial literacy of younger generations.
+
+We hope that InvestED will act not only as a stepping stone into the often intimidating world of investing, but also as an educational tool that presents accurate market outlooks using bleeding edge data from Goldman Sachs' Marquee.
 
 ## What it does:
 
-InvestED allows for users to follow a selection process that explains their choices when analyzing a stock to invest in a simplified and easy-to-understand manner. 
+InvestED guides users through a step-by-step process that explains their choices when analyzing a stock to invest in a simplified and easy-to-understand manner. InvestED streamlines the investing experience for those new to the field and makes it accessible.
 
 ## How we built it:
 
-We took data from Goldman Sachs USCANFPP, sourced from the Marquee API, and stored it within a SQL database to simplify stock analysis. The user interface was developed using UIkit framework.
+We built a Python-based webapp using Django as the web framework and UIKit as the frontend CSS framework. 
+Using the `marquee_data_interface.py` script we wrote (packaged with InvestED), we queried Goldman Sachs' 
+USCANFPP dataset sourced from the Marquee API and indexed it in an SQL database. Then, we analyzed the various contextual investment factors from the database and used them to calculate the ideal stock for users to invest in, considering their input.
 
 ## Challenges we ran into:
 
-As a group of relatively new hackers, our inexperience often lended itself to slowing down our full stack solution. For example, we had to learn how to utilize SQL databases with no prior experience, as well as struggling through the API documentation of Marquee which frequently left us puzzled.
+As a group of relatively new hackers, our inexperience often lended itself to slowing down our full stack solution. For example, we had to learn how to utilize SQL databases (not to mention in conjunction with Django) with no prior experience in order to speed up our load times, as well as struggle through the API documentation of Marquee which while feature-rich, frequently left us puzzled.
 
 ## Accomplishments we are proud of:
 
@@ -22,14 +26,12 @@ While on one end standing as challenges, conquering these obstacles left us with
 
 ## What we built it with:
 
-Goldman Sachs Marquee API - Used to retrieve raw investing and financial information on stocks\n
+Goldman Sachs Marquee API - Used to retrieve raw investment and financial indicators and information on stocks
 
-UIKit - Web CSS framework
+UIKit - Front-end Web CSS framework
 
-Javascript - 
+Django/Python - Back-end Web Framework
 
-Python - Backend
+JavaScript - Animations
 
-Django - Frontend
-
-SQLite - Database Storage
+SQLite - Database
