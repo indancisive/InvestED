@@ -22,9 +22,14 @@ While on one end standing as challenges, conquering these obstacles left us with
 
 ## What we built it with:
 
-Goldman Sachs Marquee API - Used to retrieve raw investing and financial information on stocks
+Goldman Sachs Marquee API - Used to retrieve raw investing and financial information on stocks\n
+
 UIKit - Web CSS framework
+
 Javascript - 
+
 Python - Backend
+
 Django - Frontend
+
 SQLite - Database Storage
